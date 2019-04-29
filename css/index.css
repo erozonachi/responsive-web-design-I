@@ -204,3 +204,32 @@ footer {
 	margin: 10rem 0;
 	text-align: center;
 }
+
+@media screen and (max-width: 800px){
+  .container {
+    padding: 0 2%;
+  }
+  header nav {
+    flex-direction: column-reverse;
+  }
+  header nav ul {
+    width: 96%;
+    padding: 0 2%;
+  }
+  header nav ul li {
+    margin: 0;
+  }
+  nav > a {
+    width: 25%;
+    margin-bottom: 3em;
+  }
+  header .header-container {
+    justify-content: space-around;
+  }
+  header .header-container .header-img {
+    display: none;
+  }
+  main section .lower-text-container {
+    width: 31%;
+  }
+}
