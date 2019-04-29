@@ -205,6 +205,7 @@ footer {
 	text-align: center;
 }
 
+/* Responsive design using media queries */
 @media screen and (max-width: 800px){
   .container {
     padding: 0 2%;
@@ -232,4 +233,72 @@ footer {
   main section .lower-text-container {
     width: 31%;
   }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 70%;
+  }
+  .container {
+    padding: 0;
+  }
+
+  main, footer {
+    padding: 0 2%;
+  }
+
+  hr {
+    margin: 0 2%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  header nav ul li {
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1.5em 0;
+    border-top: .05em solid black;
+  }
+
+  header nav ul li:last-child {
+    border-bottom: .05em solid black;
+  }
+
+  nav > a {
+    width: 40%;
+    margin-bottom: 3em;
+  }
+
+  header .header-container .item {
+    width: 100%;
+  }
+
+  header .header-container .item h1 {
+    font-size: 4em;
+  }
+  
+  header .header-container .item button {
+    margin: 0 10% 5em 10%;
+    width: 80%;
+  }
+
+	main section {
+    flex-direction: column;
+    margin-bottom: 2em;
+	}
+
+  main section .upper-text-container {
+    margin: 1em 0;
+		width: 100%;
+	}
+	
+	main section .lower-text-container {
+    margin-bottom: 1em;
+		width: 100%;
+	}
 }
