@@ -173,6 +173,12 @@ header .header-container .item button {
   background-color: white;
 }
 
+header section .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 header .header-container .header-img {
 	background: url('../img/header-img.png') no-repeat;
 	width: 48%;
@@ -194,6 +200,29 @@ main section .lower-text-container {
 	width: 32%;
 }
 
+/* Services main portion specific styling */
+main .item-container .service-item {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 49%;
+	background-color: #eeeeee;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+main .item-container .service-item .service-btn {
+	margin: 20px 0;
+  width: 40%;
+  background-color: #fff;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 10px 0;
+	font-size: 100%;
+	cursor: pointer;
+}
+
 /* Footer portion styling */
 footer {
 	margin: 4rem 0 2rem 1rem;
@@ -203,6 +232,23 @@ footer {
 	display: block;
 	margin: 10rem 0;
 	text-align: center;
+}
+
+/* Services footer portion specific styling */
+footer section .text-container {
+  width: 49%;
+}
+.bullet {
+	margin-top: 20px;
+	list-style-type: square;
+  list-style-position: inside;
+  text-align: left;
+}
+
+.bullet-item {
+	margin-right: 0;
+  padding: 7px 0;
+  text-align: left;
 }
 
 /* Responsive design using media queries */
@@ -300,5 +346,30 @@ footer {
 	main section .lower-text-container {
     margin-bottom: 1em;
 		width: 100%;
-	}
+  }
+
+  main .item-container {
+    flex-direction: column;
+  }
+
+  main .item-container .service-item {
+    width: 99%;
+  }
+
+  main .item-container .service-item:first-child {
+    margin-bottom: 1em;
+  }
+
+  main .item-container .service-item:last-child {
+    margin-top: 1em;
+  }
+
+  footer section {
+    flex-direction: column;
+  }
+  
+  footer section .text-container {
+    width: 99%;
+    margin: 1em 0;
+  }
 }
