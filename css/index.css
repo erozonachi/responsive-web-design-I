@@ -1,3 +1,375 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  font-size: 1.6rem;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+:root {
+  font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1024px;
+	margin: 0 auto;
+}
+
+header, header nav, section, main {
+	display: flex;
+	max-width: 100%;
+	align-content: center;
+}
+
+section {
+  margin: 2rem 1rem;
+  justify-content: space-between;
+}
+
+.stack {
+	flex-direction: column;
+}
+
+/* Header portion styling */
+header nav {
+	justify-content: space-between;
+	padding: 2rem 0.5rem;
+	margin-bottom: 5rem;
+}
+
+header nav ul, header nav ul li {
+	display: flex;
+	text-align: center;
+}
+
+header nav ul {
+  width: 70%;
+  align-self: center;
+  justify-content: space-between;
+	align-items: center
+}
+
+li a {
+	text-decoration: none;
+	color: #cccccc;
+	text-align: inherit;
+}
+
+li a:hover {
+	color: #000000;
+}
+
+.active {
+	color: #666666
+}
+
+nav > a {
+  display: flex;
+  align-self: center;
+	width: 20%;
+}
+
+.logo {
+	display: flex;
+	max-width: 100%;
+}
+
+header .header-container {
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .header-container .item {
+  align-self: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 48%;
+	width: 48%;
+	align-items: center;
+  justify-content: center;
+}
+
+header .header-container .item h1 {
+	text-align: center;
+	font-size: 3.4rem;
+}
+
+header .header-container .item button {
+	margin: 0 25% 5rem 25%;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 0;
+	padding: 1rem 0;
+	font-size: 1.6rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+header section .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header .header-container .header-img {
+	background: url('../img/header-img.png') no-repeat;
+	width: 48%;
+  height: 40rem;
+}
+
+/* Main portion styling */
+main section .upper-text-container {
+	width: 49%;
+}
+
+.banner {
+	display: block;
+  width: 98%;
+  padding: 0 1%;
+}
+
+main section .lower-text-container {
+	width: 32%;
+}
+
+/* Services main portion specific styling */
+main .item-container .service-item {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 49%;
+	background-color: #eeeeee;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+main .item-container .service-item .service-btn {
+	margin: 20px 0;
+  width: 40%;
+  background-color: #fff;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 10px 0;
+	font-size: 100%;
+	cursor: pointer;
+}
+
+/* Footer portion styling */
+footer {
+	margin: 4rem 0 2rem 1rem;
+}
+
+.copyright {
+	display: block;
+	margin: 10rem 0;
+	text-align: center;
+}
+
+/* Services footer portion specific styling */
+footer section .text-container {
+  width: 49%;
+}
+.bullet {
+	margin-top: 20px;
+	list-style-type: square;
+  list-style-position: inside;
+  text-align: left;
+}
+
+.bullet-item {
+	margin-right: 0;
+  padding: 7px 0;
+  text-align: left;
+}
+
+/* Responsive design using media queries */
+@media screen and (max-width: 800px){
+  .container {
+    padding: 0 2%;
+  }
+  header nav {
+    flex-direction: column-reverse;
+  }
+  header nav ul {
+    width: 96%;
+    padding: 0 2%;
+  }
+  header nav ul li {
+    margin: 0;
+  }
+  nav > a {
+    width: 25%;
+    margin-bottom: 3em;
+  }
+  header .header-container {
+    justify-content: space-around;
+  }
+  header .header-container .header-img {
+    display: none;
+  }
+  main section .lower-text-container {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 70%;
+  }
+  .container {
+    padding: 0;
+  }
+
+  main, footer {
+    padding: 0 2%;
+  }
+
+  hr {
+    margin: 0 2%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  header nav ul li {
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1.5em 0;
+    border-top: .05em solid black;
+  }
+
+  header nav ul li:last-child {
+    border-bottom: .05em solid black;
+  }
+
+  nav > a {
+    width: 40%;
+    margin-bottom: 3em;
+  }
+
+  header .header-container .item {
+    width: 100%;
+  }
+
+  header .header-container .item h1 {
+    font-size: 4em;
+  }
+  
+  header .header-container .item button {
+    margin: 0 10% 5em 10%;
+    width: 80%;
+  }
+
+	main section {
+    flex-direction: column;
+    margin-bottom: 2em;
+	}
+
+  main section .upper-text-container {
+    margin: 1em 0;
+		width: 100%;
+	}
+	
+	main section .lower-text-container {
+    margin-bottom: 1em;
+		width: 100%;
+  }
+
+  main .item-container {
+    flex-direction: column;
+  }
+
+  main .item-container .service-item {
+    width: 99%;
+  }
+
+  main .item-container .service-item:first-child {
+    margin-bottom: 1em;
+  }
+
+  main .item-container .service-item:last-child {
+    margin-top: 1em;
+  }
+
+  footer section {
+    flex-direction: column;
+  }
+  
+  footer section .text-container {
+    width: 99%;
+    margin: 1em 0;
+  }
+}
